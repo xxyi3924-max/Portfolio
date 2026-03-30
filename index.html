@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bobby Xiao · Portfolio</title>
+  <meta name="description" content="Boyang (Bobby) Xiao — Engineering Science student at UofT. AI, Finance, Biomedical Systems, Accessibility." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">Bobby <span>Xiao</span></a>
+    <ul class="nav-links">
+      <li><a href="#about" data-i18n="nav-about">About</a></li>
+      <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+      <li><a href="#experience" data-i18n="nav-experience">Experience</a></li>
+      <li><a href="#recognition" data-i18n="nav-recognition">Recognition</a></li>
+      <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+    </ul>
+    <button class="lang-toggle" id="lang-toggle">中文</button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero" class="section">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-school">
+          <span class="hero-school-major" data-i18n="hero-major">Engineering Science</span>
+          <span class="hero-school-sep">·</span>
+          <span class="hero-school-uni" data-i18n="hero-uni">University of Toronto</span>
+          <span class="hero-school-year" data-i18n="hero-year">Class of 2T9</span>
+        </div>
+        <h1>Boyang<br/><span class="accent">Bobby</span> Xiao</h1>
+        <p class="hero-sub" data-i18n="hero-sub">
+          Building at the intersection of AI, Finance, Biomedical Systems, and Accessibility.
+        </p>
+        <div class="hero-tags">
+          <span class="tag" data-i18n="tag-ai">AI & Agents</span>
+          <span class="tag" data-i18n="tag-fintech">FinTech</span>
+          <span class="tag orange" data-i18n="tag-biomedical">Biomedical Systems</span>
+          <span class="tag" data-i18n="tag-accessibility">Accessibility</span>
+          <span class="tag" data-i18n="tag-hardware">Hardware</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects" data-i18n="btn-view-projects">View Projects</a>
+          <a class="btn btn-orange" href="assets/Bobby_Xiao_CV.pdf" target="_blank" data-i18n="btn-download-cv">Download CV</a>
+          <a class="btn btn-secondary" href="#contact" data-i18n="btn-contact">Contact</a>
+        </div>
+      </div>
+      <img class="hero-photo" src="assets/photo.jpg" alt="Bobby Xiao" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section section-alt">
+  <div class="container">
+    <p class="section-label fade-up" data-i18n="about-label">About</p>
+    <h2 class="section-title fade-up" data-i18n="about-title">Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <p data-i18n="about-p1">
+          I'm a first-year Engineering Science student at the University of Toronto (graduating 2029),
+          pursuing a major in Biomedical Systems or Math-Statistics-Finance Engineering.
+        </p>
+        <p data-i18n="about-p2">
+          I enjoy building things that bridge disciplines — whether that's an AI agent that reads institutional
+          trading signals before the crowd, a sip-and-puff assistive device for a wheelchair user, or a
+          hackathon prototype that wins a creative design award.
+        </p>
+        <p data-i18n="about-p3">
+          I previously interned at Shenzhen YHLO Biotech as an R&D and Bioinformatics Engineer, where I applied
+          machine learning to diagnose fevers of unknown origin. I hold two Chinese patents for firefighting drone systems.
+        </p>
+        <p data-i18n="about-p4">
+          Fluent in English and Mandarin. Currently based in Toronto.
+        </p>
+      </div>
+      <div class="skills-grid fade-up">
+        <div class="skill-group">
+          <h4 data-i18n="skill-prog">Programming</h4>
+          <div class="skill-chips">
+            <span class="chip blue">Python</span>
+            <span class="chip blue">C</span>
+            <span class="chip blue">Arduino</span>
+            <span class="chip blue">MATLAB</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4 data-i18n="skill-eng">Engineering</h4>
+          <div class="skill-chips">
+            <span class="chip">SolidWorks</span>
+            <span class="chip">Laser Cutting</span>
+            <span class="chip">3D Printing</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4 data-i18n="skill-ai">AI & Finance</h4>
+          <div class="skill-chips">
+            <span class="chip orange">Agentic AI</span>
+            <span class="chip orange">Flask</span>
+            <span class="chip orange">DCF / Valuation</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4 data-i18n="skill-other">Other</h4>
+          <div class="skill-chips">
+            <span class="chip">Biomedical Research</span>
+            <span class="chip">Video Editing</span>
+            <span class="chip">Mandarin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section">
+  <div class="container">
+    <p class="section-label fade-up" data-i18n="proj-label">Projects</p>
+    <h2 class="section-title fade-up" data-i18n="proj-title">What I've Built</h2>
+
+    <div class="filter-bar fade-up">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter-all">All</button>
+      <button class="filter-btn" data-filter="ai-finance" data-i18n="filter-ai">AI & Finance</button>
+      <button class="filter-btn" data-filter="hardware" data-i18n="filter-hw">Hardware & IoT</button>
+      <button class="filter-btn" data-filter="design" data-i18n="filter-design">Design & Engineering</button>
+    </div>
+  </div>
+
+  <!-- 1. Portfolio Hub -->
+  <div class="project-row fade-up" data-category="ai-finance">
+    <div class="container">
+      <div class="project-row-inner">
+        <div class="project-row-img">
+          <div class="proj-img-wrap proj-iframe-wrap">
+            <iframe
+              src="https://portfolio-hub.net"
+              title="Portfolio Hub live site"
+              scrolling="yes"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <div class="project-row-text">
+          <div class="proj-meta">
+            <span class="tag">AI</span>
+            <span class="tag orange">FinTech</span>
+            <span class="proj-year">2025–Present</span>
+          </div>
+          <h3 data-i18n="p1-title">Portfolio Hub</h3>
+          <p data-i18n="p1-desc">Full-stack AI-powered portfolio management web app built with Flask and WebSockets. Features a multi-stage agentic pipeline — investor screening, smart money signals, news analysis, and composite scoring — delivering real-time TRIM / HOLD / ADD recommendations across a personalized holdings dashboard.</p>
+          <div class="proj-links">
+            <a class="btn btn-primary" href="https://portfolio-hub.net" target="_blank" data-i18n="p1-btn">Live Site →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Creamy Smart Money -->
+  <div class="project-row project-row-alt fade-up" data-category="ai-finance">
+    <div class="container">
+      <div class="project-row-inner">
+        <div class="project-row-img">
+          <div class="proj-img-wrap">
+            <img src="assets/smart_money.png" alt="Smart Money Agent deck" />
+          </div>
+        </div>
+        <div class="project-row-text">
+          <div class="proj-meta">
+            <span class="tag">Agentic AI</span>
+            <span class="tag orange">FinTech</span>
+            <span class="award-badge">🏆 GenAI Genesis Hackathon</span>
+            <span class="proj-year" data-i18n="p2-year">Mar 2026</span>
+          </div>
+          <h3 data-i18n="p2-title">Creamy — Smart Money Agent</h3>
+          <p data-i18n="p2-desc">An agentic AI system with 6 specialized tools: Options flow detection, Dark Pool volume absorption and flow/price divergence, Institutional Positioning, SEC filings, and Social Buzz. Built to surface institutional trading footprints before retail attention arrives — winner of the GenAI Genesis Hackathon Smart Money track.</p>
+          <div class="proj-links">
+            <a class="btn btn-primary" href="https://github.com/xxyi3924-max/Creamy-Smart_Money_Track_Agent" target="_blank" data-i18n="p2-btn">GitHub →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Silent Sensor -->
+  <div class="project-row fade-up" data-category="hardware">
+    <div class="container">
+      <div class="project-row-inner">
+        <div class="project-row-img">
+          <div class="proj-img-wrap">
+            <img src="assets/silent.png" alt="Silent Sensor research" />
+          </div>
+        </div>
+        <div class="project-row-text">
+          <div class="proj-meta">
+            <span class="tag orange">Biomedical</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">Accessibility</span>
+            <span class="proj-year" data-i18n="p3-year">Feb 2026–Present</span>
+          </div>
+          <h3 data-i18n="p3-title">Silent Sensor — Sip & Puff Switch</h3>
+          <p data-i18n="p3-desc">Leading a 15-member UTBionic team to develop a sip-and-puff assistive input device for a wheelchair user with unpredictable tonic head movements. The pressure sensor and Arduino-based system enables fully independent device control through breath, mounting on a flexible arm or wheelchair frame for reliable access regardless of head movement.</p>
+          <div class="proj-links">
+            <span class="tag orange" style="padding:8px 16px;font-size:0.85rem;" data-i18n="p3-tag">Project Lead · UTBionic</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Smile Hackathon -->
+  <div class="project-row project-row-alt fade-up" data-category="design">
+    <div class="container">
+      <div class="project-row-inner">
+        <div class="project-row-img">
+          <div class="proj-img-wrap">
+            <img src="assets/smile.png" alt="Smile Hackathon presentation" />
+          </div>
+        </div>
+        <div class="project-row-text">
+          <div class="proj-meta">
+            <span class="tag orange">Biomedical</span>
+            <span class="tag">Design</span>
+            <span class="award-badge">🏆 Most Creative Design</span>
+            <span class="proj-year" data-i18n="p4-year">Feb 2026</span>
+          </div>
+          <h3 data-i18n="p4-title">Sensory Desensitization Toothbrush</h3>
+          <p data-i18n="p4-desc">Designed a transitional oral hygiene device for children with sensory processing disorders (SPD) who experience oral tactile hypersensitivity — affecting 1 in 6 children. Leverages natural chewing as a stimming bridge toward conventional toothbrushing. Won the Most Creative Design Award at SmileHacks × CUBE 2026.</p>
+          <div class="proj-links">
+            <a class="btn btn-orange" href="#recognition" data-i18n="p4-btn">View Award →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Home Automation -->
+  <div class="project-row fade-up" data-category="hardware">
+    <div class="container">
+      <div class="project-row-inner">
+        <div class="project-row-img">
+          <div class="proj-img-wrap">
+            <img src="assets/homeauto.png" alt="HomeAutomation circuit" />
+          </div>
+        </div>
+        <div class="project-row-text">
+          <div class="proj-meta">
+            <span class="tag">IoT</span>
+            <span class="tag">Arduino / ESP32</span>
+            <span class="proj-year" data-i18n="p5-year">Oct 2025</span>
+          </div>
+          <h3 data-i18n="p5-title">HomeAutomation — Voice Door Control</h3>
+          <p data-i18n="p5-desc">IoT project enabling a disabled client to open their front door using voice commands. Developed software and circuits integrating an ESP32 microcontroller, motor driver, and linear actuator, with GPIO-controlled relay logic for door mechanism actuation.</p>
+          <div class="proj-links">
+            <span class="tag" style="padding:8px 16px;font-size:0.85rem;" data-i18n="p5-tag">Team Member · UTBionic</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. UTEFA Stock Pitch -->
+  <div class="project-row project-row-alt fade-up" data-category="ai-finance">
+    <div class="container">
+      <div class="project-row-inner">
+        <div class="project-row-img">
+          <div class="proj-img-wrap">
+            <img src="assets/stock_pitch.png" alt="FedEx stock pitch" />
+          </div>
+        </div>
+        <div class="project-row-text">
+          <div class="proj-meta">
+            <span class="tag orange">Finance</span>
+            <span class="tag">Valuation</span>
+            <span class="proj-year" data-i18n="p6-year">Feb 2026</span>
+          </div>
+          <h3 data-i18n="p6-title">FedEx Stock Pitch — DCF Valuation</h3>
+          <p data-i18n="p6-desc">Built a comprehensive DCF, DDM, and Graham valuation model for FedEx Corporation (NYSE: FDX), arriving at a $350 price target (Equal Weight / Hold). Presented full industry analysis, forward-looking spinoff analysis, and investment thesis at the UTEFA Stock Pitch Competition.</p>
+          <div class="proj-links">
+            <span class="tag" style="padding:8px 16px;font-size:0.85rem;" data-i18n="p6-tag">UTEFA · Feb 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. UTEFA Case -->
+  <div class="project-row fade-up" data-category="ai-finance">
+    <div class="container">
+      <div class="project-row-inner">
+        <div class="project-row-img">
+          <div class="proj-img-wrap">
+            <img src="assets/case_comp.png" alt="UTEFA case competition" />
+          </div>
+        </div>
+        <div class="project-row-text">
+          <div class="proj-meta">
+            <span class="tag orange">Finance</span>
+            <span class="tag">Strategy</span>
+            <span class="proj-year" data-i18n="p7-year">Mar 2026</span>
+          </div>
+          <h3 data-i18n="p7-title">UTEFA Case — MarketEdge Investment</h3>
+          <p data-i18n="p7-desc">Conducted strategic risk assessment across 4 dimensions — infrastructure, expansion, resource, and concentration risk — using financial metrics (ARR, YoY growth, runway) to deliver an investment recommendation for a design-to-production software platform partnership at the RCAG × UTEFA Case Competition.</p>
+          <div class="proj-links">
+            <span class="tag" style="padding:8px 16px;font-size:0.85rem;" data-i18n="p7-tag">RCAG × UTEFA · Mar 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Praxis I -->
+  <div class="project-row project-row-alt fade-up" data-category="design">
+    <div class="container">
+      <div class="project-row-inner">
+        <div class="project-row-img">
+          <div class="proj-img-wrap">
+            <img src="assets/praxis1.png" alt="Praxis I design brief" />
+          </div>
+        </div>
+        <div class="project-row-text">
+          <div class="proj-meta">
+            <span class="tag">Engineering Design</span>
+            <span class="tag">Accessibility</span>
+            <span class="proj-year" data-i18n="p8-year">Oct 2025</span>
+          </div>
+          <h3 data-i18n="p8-title">Praxis I — Backpack Cable Storage</h3>
+          <p data-i18n="p8-desc">Design brief exploring solutions to reduce cable tangling and unstowing time for Engineering Science students. Applied cable stiffness research, tangle probability modelling, and stakeholder interviews. Incorporated accessibility principles for users with upper-limb limitations.</p>
+          <div class="proj-links">
+            <span class="tag" style="padding:8px 16px;font-size:0.85rem;" data-i18n="p8-tag">Praxis I · UofT 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. Praxis II / Bridge -->
+  <div class="project-row fade-up" data-category="design">
+    <div class="container">
+      <div class="project-row-inner">
+        <div class="project-row-img">
+          <div class="proj-img-wrap">
+            <img src="assets/bridge_photo.jpg" alt="CIV102 bridge design" />
+          </div>
+        </div>
+        <div class="project-row-text">
+          <div class="proj-meta">
+            <span class="tag">Structural</span>
+            <span class="tag">Materials</span>
+            <span class="proj-year" data-i18n="p9-year">2025</span>
+          </div>
+          <h3 data-i18n="p9-title">CIV102 — Bridge Design</h3>
+          <p data-i18n="p9-desc">Collaborative bridge design project applying structural engineering principles from CIV102: Structures and Materials. Full iterative design process from diverging explorations through converging selection, documented with engineering calculations, assembly drawings, and design reports.</p>
+          <div class="proj-links">
+            <span class="tag" style="padding:8px 16px;font-size:0.85rem;" data-i18n="p9-tag">CIV102 · UofT 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="section section-alt">
+  <div class="container">
+    <p class="section-label fade-up" data-i18n="exp-label">Experience</p>
+    <h2 class="section-title fade-up" data-i18n="exp-title">Where I've Worked</h2>
+    <div class="timeline">
+
+      <div class="timeline-item fade-up">
+        <p class="timeline-date" data-i18n="exp1-date">FEB 2026 – PRESENT</p>
+        <h3 data-i18n="exp1-title">Project Lead — Silent Sensor (Sip & Puff)</h3>
+        <p class="org" data-i18n="exp1-org">University of Toronto Bioengineering Design Team (UTBionic)</p>
+        <ul>
+          <li data-i18n="exp1-li1">Managing operations of a 15-member team to develop an Arduino-based sip-and-puff assistive device</li>
+          <li data-i18n="exp1-li2">Leading systematic engineering design process from need-finding through prototyping</li>
+          <li data-i18n="exp1-li3">Designing for users with tonic head movement — pressure sensor + relay module architecture</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item fade-up">
+        <p class="timeline-date" data-i18n="exp2-date">OCT 2025 – FEB 2026</p>
+        <h3 data-i18n="exp2-title">Club Member — HomeAutomation Project</h3>
+        <p class="org" data-i18n="exp2-org">UTBionic, University of Toronto</p>
+        <ul>
+          <li data-i18n="exp2-li1">Software and circuit development for voice-controlled door access for a disabled client</li>
+          <li data-i18n="exp2-li2">Collaborated on hardware integration and firmware development</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item orange-dot fade-up">
+        <p class="timeline-date" data-i18n="exp3-date">JUL 2024 – AUG 2024</p>
+        <h3 data-i18n="exp3-title">Bioinformatics Analysis Engineer</h3>
+        <p class="org" style="color: var(--orange);" data-i18n="exp3-org">Shenzhen YHLO Biotech Co. Ltd.</p>
+        <ul>
+          <li data-i18n="exp3-li1">Applied machine learning to predict causes of Fever of Unknown Origin from biochemical indicators</li>
+          <li data-i18n="exp3-li2">Authored a report on ML applications for diagnosing undiagnosed fevers</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item orange-dot fade-up">
+        <p class="timeline-date" data-i18n="exp4-date">JAN 2024 – FEB 2024</p>
+        <h3 data-i18n="exp4-title">Research & Development Engineer</h3>
+        <p class="org" style="color: var(--orange);" data-i18n="exp4-org">Shenzhen YHLO Biotech Co. Ltd.</p>
+        <ul>
+          <li data-i18n="exp4-li1">Prepared cDNA libraries and conducted quality control testing</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== RECOGNITION ===== -->
+<section id="recognition" class="section">
+  <div class="container">
+    <p class="section-label fade-up" data-i18n="recog-label">Recognition</p>
+    <h2 class="section-title fade-up" data-i18n="recog-title">Awards & Patents</h2>
+    <div class="recognition-grid">
+
+      <div class="recog-card fade-up">
+        <div class="recog-icon">🏆</div>
+        <h3 data-i18n="recog1-title">Most Creative Design Award</h3>
+        <p data-i18n="recog1-desc">
+          Awarded for designing a sensory desensitization toothbrush solution for children with oral
+          tactile hypersensitivity. SmileHacks × CUBE Hackathon.
+        </p>
+        <span class="date" data-i18n="recog1-date">FEBRUARY 2026</span>
+      </div>
+
+      <div class="recog-card fade-up">
+        <div class="recog-icon">🥇</div>
+        <h3 data-i18n="recog2-title">Innovation Potential Award</h3>
+        <p data-i18n="recog2-desc">
+          "Fire Eagle — Fire Reconnaissance and Control Pioneer Team," Sprout Track.
+          China International College Students' Innovation Competition.
+        </p>
+        <span class="date" data-i18n="recog2-date">2025</span>
+      </div>
+
+      <div class="recog-card fade-up">
+        <div class="recog-icon">📜</div>
+        <h3 data-i18n="recog3-title">Patent — Firefighting Drone</h3>
+        <p data-i18n="recog3-desc">
+          Chinese utility patent for a firefighting drone system.<br/>
+          Patent No. 202420991088.7
+        </p>
+        <span class="date" data-i18n="recog3-date">AUGUST 2024</span>
+      </div>
+
+      <div class="recog-card fade-up">
+        <div class="recog-icon">📜</div>
+        <h3 data-i18n="recog4-title">Patent — Reconnaissance Firefighting Drone</h3>
+        <p data-i18n="recog4-desc">
+          Chinese utility patent for a reconnaissance firefighting drone.<br/>
+          Patent No. 202420991086.8
+        </p>
+        <span class="date" data-i18n="recog4-date">AUGUST 2024</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <div class="contact-inner fade-up">
+      <p class="section-label" style="text-align:center;" data-i18n="contact-label">Contact</p>
+      <h2 class="section-title" style="text-align:center; margin-bottom:16px;" data-i18n="contact-title">Get In Touch</h2>
+      <p data-i18n="contact-desc">
+        Open to internships, research collaborations, and interesting conversations.
+        Feel free to reach out.
+      </p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:bobby.xiao@mail.utoronto.ca">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span data-i18n="contact-email">Email</span>
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/boyang-xiao-bb7a53383" target="_blank">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span data-i18n="contact-linkedin">LinkedIn</span>
+        </a>
+        <a class="contact-link" href="https://github.com/xxyi3924-max" target="_blank">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <span data-i18n="contact-github">GitHub</span>
+        </a>
+        <a class="contact-link" href="assets/Bobby_Xiao_CV.pdf" target="_blank">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span data-i18n="contact-resume">Resume</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p data-i18n="footer-text">© 2026 Boyang (Bobby) Xiao · Engineering Science, University of Toronto</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
