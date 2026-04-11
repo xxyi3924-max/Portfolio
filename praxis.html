@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bobby Xiao: ESC102 Engineering Portfolio</title>
+  <link rel="stylesheet" href="css/praxis.css" />
+  <style>
+    .hero-back {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      color: rgba(255,255,255,.65);
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      transition: color .15s;
+    }
+    .hero-back::before { content: "←"; }
+    .hero-back:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <!-- ── Hero ───────────────────────────────────────────────── -->
+  <header class="home-hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <a class="hero-back" href="index.html">Back to Portfolio</a>
+        <p class="hero-eyebrow">ESC102 · Engineering Science Praxis II · 2026</p>
+        <h1 class="hero-name">Bobby Xiao</h1>
+        <p class="hero-tagline">
+          Good engineering starts with understanding yourself,
+          understanding who you build for,
+          and applying a rigorous process to connect the two.
+        </p>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/praxis/profile.jpg" alt="Bobby Xiao" />
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Position Statement ─────────────────────────────────── -->
+  <section class="home-position">
+    <div class="container">
+      <p class="section-label">My approach to engineering design</p>
+      <h2 class="section-title">Position Statement</h2>
+
+      <blockquote class="position-statement">
+        Good engineering requires three things: understanding your own assumptions and
+        limitations, understanding the people you are building for, and applying a
+        rigorous process to validate both.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ── Position Evolution ───────────────────────────────────── -->
+  <section class="position-evolution">
+    <div class="container">
+      <p class="section-label">How my position changed</p>
+      <h2 class="section-title">Position Over Time</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">Sep 2025</span>
+            <span class="timeline-tag">Starting position</span>
+          </div>
+          <blockquote class="timeline-quote">
+            Engineering is not about proving what I can build. It is about understanding
+            who I am building for, and whether it truly works in their reality.
+          </blockquote>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">Dec 2025</span>
+            <span class="timeline-tag">After Praxis I</span>
+          </div>
+          <p class="timeline-text">
+            I began valuing <strong>secondary research</strong> as a way to better
+            understand the stakeholders. Interviews alone are not enough to steelman
+            a framing claim.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">Dec 2025</span>
+            <span class="timeline-tag">After CIV102 Bridge</span>
+          </div>
+          <p class="timeline-text">
+            I extended my value of stakeholder reality to <strong>physical reality itself</strong>.
+            A model that is not validated against what it claims to represent is speculative,
+            regardless of how rigorous the mathematics are.
+            I now approach every design with the question: what are we assuming, and when
+            will we test it?
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">Apr 2026</span>
+            <span class="timeline-tag">After Praxis II</span>
+          </div>
+          <p class="timeline-text">
+            My core values remain the same: understand our own limitations, understand
+            stakeholders through scientific methods, and validate a design through testing.
+            Praxis II gave me the chance to apply these more thoroughly across a full
+            design cycle.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Project Navigation ─────────────────────────────────── -->
+  <section class="projects-nav">
+    <span class="section-label">Design projects</span>
+    <div class="project-cards">
+
+      <a class="project-card" href="praxis-1.html"
+         data-num="1"
+         style="--card-color: #002a5c">
+        <div>
+          <p class="card-number">Project 01</p>
+          <h3 class="card-title">Praxis I</h3>
+          <p class="card-desc">
+            Left-handed whiteboard use in the EngSci Common Room. Stakeholder-driven
+            framing and iterative convergence led to an erasable permanent marker solution.
+          </p>
+        </div>
+        <div class="card-footer">
+          <div class="card-badges">
+            <span class="badge badge-frame">Frame</span>
+            <span class="badge badge-converge">Converge</span>
+          </div>
+          <span class="card-arrow">View →</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="praxis-bridge.html"
+         data-num="2"
+         style="--card-color: #4a7c59">
+        <div>
+          <p class="card-number">Project 02</p>
+          <h3 class="card-title">CIV102 Bridge</h3>
+          <p class="card-desc">
+            Team 306 structural bridge design using engineering analysis
+            under real material and load constraints.
+          </p>
+        </div>
+        <div class="card-footer">
+          <div class="card-badges">
+            <span class="badge badge-frame">Frame</span>
+            <span class="badge badge-converge">Converge</span>
+            <span class="badge badge-represent">Represent</span>
+          </div>
+          <span class="card-arrow" style="color:#4a7c59">View →</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="praxis-2.html"
+         data-num="3"
+         style="--card-color: #7b5ea7">
+        <div>
+          <p class="card-number">Project 03</p>
+          <h3 class="card-title">Praxis II</h3>
+          <p class="card-desc">
+            Variable swim resistance device. Full design cycle from opportunity
+            framing to prototype and showcase.
+          </p>
+        </div>
+        <div class="card-footer">
+          <div class="card-badges">
+            <span class="badge badge-frame">Frame</span>
+            <span class="badge badge-diverge">Diverge</span>
+            <span class="badge badge-represent">Represent</span>
+          </div>
+          <span class="card-arrow" style="color:#7b5ea7">View →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── References ───────────────────────────────────────────── -->
+  <section class="home-references">
+    <div class="container">
+      <p class="section-label">Source documents</p>
+      <h2 class="section-title">References</h2>
+
+      <div class="ieee-references">
+        <p class="ieee-ref-entry">[1] A. Chen, M. Ehrlich, M. Chau, and B. Xiao, <a href="pdfs/praxis1-final-report.pdf" target="_blank">"Left-Handed Whiteboard Use in EngSci Common Room,"</a> student design report, University of Toronto, Dec. 2025.</p>
+        <p class="ieee-ref-entry">[2] A. Chen, M. Ehrlich, M. Chau, and B. Xiao, <a href="pdfs/praxis1-design-report.pdf" target="_blank">"Design Report: Optimising Backpack Cable Storage,"</a> student design report, University of Toronto, Dec. 2025.</p>
+        <p class="ieee-ref-entry">[3] C. Ma, E. Rioja Kuri Kassis, and B. Xiao, <a href="pdfs/bridge-design-report.pdf" target="_blank">"CIV102 Project Team 306 Design Report,"</a> structural design report, University of Toronto, Mar. 2026.</p>
+        <p class="ieee-ref-entry">[4] C. Ma, E. Rioja Kuri Kassis, and B. Xiao, <a href="pdfs/bridge-calculations.pdf" target="_blank">"CIV102 Project Team 306 Design Calculations,"</a> structural design calculations, University of Toronto, Mar. 2026.</p>
+        <p class="ieee-ref-entry">[5] A. Gaspari, E. Muslu, I. Xing, and B. Xiao, <a href="pdfs/praxis2-presentation.pdf" target="_blank">"Praxis II Showcase Presentation,"</a> design showcase presentation, University of Toronto, Apr. 2026.</p>
+        <p class="ieee-ref-entry">[6] A. Gaspari, E. Muslu, I. Xing, and B. Xiao, <a href="pdfs/praxis2-rfp-notes.pdf" target="_blank">"Praxis RFP Notes: Diverging,"</a> design process notes, University of Toronto, 2026.</p>
+        <p class="ieee-ref-entry">[7] A. Gaspari, E. Muslu, I. Xing, and B. Xiao, <a href="pdfs/praxis2-requirements.pdf" target="_blank">"Showcase Preparation: Requirements,"</a> design document, University of Toronto, 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    ESC102 Student Engineer Design Portfolio · University of Toronto · 2026
+  </footer>
+
+</body>
+</html>

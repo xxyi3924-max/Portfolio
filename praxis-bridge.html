@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIV102 Bridge: Engineering Portfolio</title>
+  <link rel="stylesheet" href="css/praxis.css" />
+</head>
+<body>
+
+  <nav class="topbar">
+    <a class="topbar-back" href="praxis.html">Back to Portfolio</a>
+    <span class="topbar-title">CIV102 Bridge: Team 306</span>
+  </nav>
+
+  <div class="project-layout">
+
+    <aside class="sidebar">
+      <p class="sidebar-label">On this page</p>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="#summary">One-Page Summary</a>
+        <a class="sidebar-link" href="#annotation">Annotation</a>
+        <a class="sidebar-link" href="#ctmfs">CTMFs</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+
+      <div class="project-page-header">
+        <p class="project-page-eyebrow">Design Project 02 · Winter 2026</p>
+        <h1 class="project-page-title">CIV102 Bridge Project: Team 306</h1>
+        <p class="project-page-teammates">With Candy Ma and Emiliano Rioja Kuri Kassis</p>
+        <div class="strand-badges">
+          <span class="badge badge-frame">Frame</span>
+          <span class="badge badge-converge">Converge</span>
+          <span class="badge badge-represent">Represent</span>
+        </div>
+      </div>
+
+      <!-- ── Team photo ────────────────────────────────────────── -->
+      <div class="figure" style="margin-bottom: 2rem;">
+        <img src="assets/praxis/bridge_team.png" alt="Team 306 at the CIV102 bridge showcase" />
+        <p class="figure-caption">Team 306 at the CIV102 bridge showcase.</p>
+      </div>
+
+      <!-- ── Project intro ──────────────────────────────────────── -->
+      <div class="summary-body" style="margin-bottom: 2rem;">
+        <p>
+          After Praxis I, I valued grounding design decisions in stakeholder reality.
+          After CIV102, I extended that value to <strong>physical reality itself</strong>.
+          A model that is not validated against what it claims to represent is speculative,
+          regardless of how rigorous the mathematics are.
+          I now approach every design with the question: what are we assuming, and when
+          will we test it?
+        </p>
+      </div>
+
+      <!-- ── Summary ──────────────────────────────────────────── -->
+      <section id="summary" class="content-section">
+        <p class="subsection-title">One-Page Summary</p>
+
+        <div class="summary-body">
+          <p>
+            In teams of three, we designed and built a matboard box girder bridge spanning
+            <strong>1200mm</strong> to support a moving 400N train load, with the goal of
+            <strong>maximizing failure load while accurately predicting it</strong>.
+            The design was hard-constrained by a fixed material budget (826,008 mm² matboard)
+            and a 200mm height limit.
+          </p>
+
+          <p>
+            <strong>Key framing decision:</strong> The assignment prescribed the objective —
+            maximize failure load — but left the framing of how open.
+            Our most important framing decision was decomposing a single cross-section
+            optimization into a <span class="key-term">spatially differentiated structural problem</span>.
+            By computing the shear force and bending moment envelopes across all train positions
+            in Python, we identified two boundary points (x&#8321; = 237mm, x&#8322; = 947mm)
+            where the dominant load type switched.
+            The bridge ends were <strong>shear-critical</strong>.
+            The central span was <strong>moment-critical</strong>.
+            <mark>A uniform cross-section would over-design for one load type at every
+            section, wasting the fixed material budget.</mark>
+            This reframing drove all subsequent design decisions.
+          </p>
+        </div>
+
+        <div class="figure">
+          <img src="assets/praxis/bridge_image2.png" alt="Bending moment and shear force diagram along the bridge" />
+          <p class="figure-caption"><strong>Fig. 1.</strong> The graph of bending moment and shear force along the bridge. The moment is scaled up to the maximum shear. The intersections represent the division of three sections of the bridge, where x&#8321; = 237mm and x&#8322; = 947mm.</p>
+        </div>
+
+        <div class="summary-body">
+          <p>
+            <strong>Design process:</strong> Starting from Design 0 (failure load: 240N),
+            we iterated through 7 designs using a
+            <span class="key-term">bottleneck-driven strategy</span>: identify the minimum
+            Factor of Safety failure mode, then target it with a specific geometric change.
+          </p>
+          <ul>
+            <li><strong>Designs 1–3:</strong> Addressed plate buckling and flexural compression by thickening flanges and increasing web height, reaching 920N.</li>
+            <li><strong>Design 5:</strong> Variable cross-section depth — shallower at ends, deeper in the middle — with a third top flange layer only in the central span. This satisfied both the material constraint and structural requirements simultaneously, yielding a failure load of 1161N.</li>
+          </ul>
+        </div>
+
+        <div class="figure">
+          <img src="assets/praxis/bridge_image3.png" alt="Design 3 cross-section with 160mm web height" />
+          <p class="figure-caption"><strong>Fig. 2.</strong> Screenshot of Design 3. Web height is 160mm.</p>
+        </div>
+
+        <div class="figure">
+          <img src="assets/praxis/bridge_image4.png" alt="Engineering drawing of Design 5 with variable depth" />
+          <p class="figure-caption"><strong>Fig. 3.</strong> Screenshot of the engineering drawing of Design 5. Two cross-sections and the side-view are clearly shown in the top part of the figure. This is the sign of reframing the problem.</p>
+        </div>
+
+        <div class="summary-body">
+          <p>
+            <strong>Final design and outcome:</strong> A pi-beam with variable depth across
+            three sections, 9 diaphragms with tighter spacing at the ends, and a
+            triple-layer top flange in the central span.
+            Theoretical failure load: <strong>1161N</strong>.
+            Actual failure load: <strong>400N</strong>.
+          </p>
+          <p>
+            The gap was caused by the connection section between structural zones.
+            At 400N, the connection could no longer endure the moment and failed.
+            This failure mode was invisible to the FOS model, which evaluated each
+            cross-section in isolation.
+            <mark>By the time the weakness became physically apparent, all material had
+            been cut and no reinforcement was possible.</mark>
+          </p>
+        </div>
+
+        <div class="figure">
+          <img src="assets/praxis/bridge_image5.jpeg" alt="Engineering drawing of final bridge dimensions" />
+          <p class="figure-caption"><strong>Fig. 4.</strong> Engineering drawing of the dimension of the bridge.</p>
+        </div>
+
+        <div class="figure">
+          <img src="assets/praxis/bridge_image6.jpeg" alt="Bridge before load testing" />
+          <p class="figure-caption"><strong>Fig. 5.</strong> Bridge before the testing.</p>
+        </div>
+
+      </section>
+
+      <!-- ── Annotation ───────────────────────────────────────── -->
+      <section id="annotation" class="content-section">
+        <div class="annotation-box">
+          <p class="subsection-title">Annotation</p>
+
+          <div class="annotation-point">
+            <p class="annotation-point-label label-bridge-frame">Key Framing Decision</p>
+            <p>
+              The assignment framed the goal as maximizing failure load.
+              We reframed it as three independent structural sub-problems.
+              <mark>This reframing unlocked the variable-depth design that a uniform
+              cross-section approach could never have reached within the material budget.</mark>
+              The Python SFD/BMD analysis was the evidence that justified this reframing.
+              Without it, a three-section bridge would have been a guess, not an argument.
+            </p>
+          </div>
+
+          <div class="annotation-point">
+            <p class="annotation-point-label label-bridge-bad">No Proxy Test</p>
+            <p>
+              Our team did not carry out any proxy testing before the final load test.
+              Every design existed only as calculation until the bridge was physically loaded.
+              <strong>The FOS model evaluated each cross-section in isolation</strong> and
+              never modelled inter-section connections.
+              <mark>The connection failure was invisible until construction, at which point
+              all material had already been cut.</mark>
+              No reinforcement was possible.
+            </p>
+            <p>
+              The gap between theoretical (1161N) and actual (400N) failure load was stark.
+              This was not a modelling error within the FOS framework. It was a failure to
+              identify connection behaviour as a testable hypothesis at all.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── CTMFs ─────────────────────────────────────────────── -->
+      <section id="ctmfs" class="content-section">
+        <hr class="section-divider" />
+        <p class="subsection-title">CTMFs Used</p>
+
+        <!-- Overview chart -->
+        <div class="ctmf-overview">
+          <div class="ctmf-overview-header">
+            <span>CTMF</span>
+            <span>Strand</span>
+            <span>Role in this project</span>
+          </div>
+          <div class="ctmf-overview-row">
+            <span class="ctmf-overview-name">Toulmin Fractal</span>
+            <span><span class="badge badge-frame">Frame</span></span>
+            <span class="ctmf-overview-desc">Decompose a single design claim into spatially distinct sub-claims, each requiring its own evidence.</span>
+          </div>
+          <div class="ctmf-overview-row">
+            <span class="ctmf-overview-name">Computational Prototyping</span>
+            <span><span class="badge badge-converge">Converge</span></span>
+            <span class="ctmf-overview-desc">Iterate through 7 designs via Python FOS model before committing to physical material.</span>
+          </div>
+          <div class="ctmf-overview-row">
+            <span class="ctmf-overview-name">CAD Prototyping</span>
+            <span><span class="badge badge-represent">Represent</span></span>
+            <span class="ctmf-overview-desc">Build a digital cutting layout in SolidWorks to verify material fit before physical cuts.</span>
+          </div>
+          <div class="ctmf-overview-row">
+            <span class="ctmf-overview-name">Proxy Testing</span>
+            <span><span class="badge badge-converge">Converge</span></span>
+            <span class="ctmf-overview-desc">Not used — lesson learned. Connection behaviour was never tested as a hypothesis.</span>
+          </div>
+        </div>
+
+        <!-- Detailed cards -->
+        <div class="ctmf-grid">
+
+          <div class="ctmf-card frame">
+            <div class="ctmf-card-header">
+              <span class="badge badge-frame">Frame</span>
+              <span class="ctmf-name">Toulmin Fractal</span>
+            </div>
+            <p class="ctmf-row-label">Evidence of Use</p>
+            <p>
+              The top-level design claim was to maximize failure load within material constraints.
+              By applying the Toulmin fractal, this claim decomposed into three spatially distinct
+              sub-claims, each requiring its own data and warrant.
+              The SFD/BMD intersection provided evidence that the bridge ends and the central
+              span were structurally different problems.
+              <mark>Each sub-claim then became its own independent design argument.</mark>
+              The intersection plot identified x&#8321; = 237mm and x&#8322; = 947mm as natural
+              structural boundaries, directly justifying the variable-depth design of Design 5.
+            </p>
+
+            <div class="figure">
+              <img src="assets/praxis/bridge_image7.png" alt="Toulmin Fractal diagram showing main claim and sub-claims" />
+              <p class="figure-caption"><strong>Fig. 6.</strong> A figure to demonstrate Toulmin Fractals with the main claim shown in the red block and sub-claims shown in orange sections.</p>
+            </div>
+
+            <p class="ctmf-row-label">Assessment</p>
+            <p>
+              The Toulmin fractal is most useful when a single claim contains hidden sub-problems
+              with different dominant constraints.
+              The risk is over-decomposition: more sub-claims introduce more boundaries that the
+              argument must account for.
+              <strong>Our splice between sections required an on-site fix</strong> because
+              constructability at the boundary was never treated as its own sub-claim.
+            </p>
+            <p class="lesson">In future projects, constructability at structural boundaries should be added as an explicit nested claim before finalising any spatially decomposed design.</p>
+          </div>
+
+          <div class="ctmf-card converge">
+            <div class="ctmf-card-header">
+              <span class="badge badge-converge">Converge</span>
+              <span class="ctmf-name">Computational Prototyping</span>
+            </div>
+            <p class="ctmf-row-label">Evidence of Use</p>
+            <p>
+              Rather than physically building each iteration, we used Python to compute all
+              8 failure mode FOS values per design, enabling rapid iteration through 7 designs
+              before touching matboard.
+              <mark>Design 4 was eliminated entirely by the model</mark> — calculated surface
+              area exceeded the material constraint by approximately 13,000 mm². No material
+              was wasted.
+            </p>
+            <p class="ctmf-row-label">Assessment</p>
+            <p>
+              Most valuable when the design space is large and physical prototyping is expensive.
+              Its core limitation is the assumption of ideal conditions.
+              <strong>The model could not predict glue joint imprecision or construction
+              variability.</strong>
+              Design 6 required an on-site I-beam addition as a direct consequence of this gap.
+            </p>
+            <p class="lesson">Use computational prototyping for bulk iteration, but schedule an explicit physical validation step before finalising. Do not treat construction as a separate phase.</p>
+          </div>
+
+          <div class="ctmf-card represent">
+            <div class="ctmf-card-header">
+              <span class="badge badge-represent">Represent</span>
+              <span class="ctmf-name">CAD Prototyping</span>
+            </div>
+            <p class="ctmf-row-label">Evidence of Use</p>
+            <p>
+              SolidWorks was used to build a digital prototype of the matboard cutting layout
+              before any physical cuts were made.
+              By virtually assembling all cross-section components within the sheet dimensions,
+              the team could verify material fit and optimise cut efficiency.
+              <mark>The digital prototype caught dimensional conflicts before construction,
+              preventing material waste from mis-cuts.</mark>
+              It also served as the construction blueprint.
+            </p>
+
+            <div class="figure">
+              <img src="assets/praxis/bridge_image8.png" alt="CAD cutting layout for matboard" />
+              <p class="figure-caption"><strong>Fig. 7.</strong> CAD layout of the cutting plan.</p>
+            </div>
+
+            <p class="ctmf-row-label">Assessment</p>
+            <p>
+              CAD prototyping occupies a middle ground between pure calculation and physical
+              construction. It is more concrete than a mathematical model and can show directly
+              whether a design can be constructed within constraints.
+              Its limitation is that the digital prototype modelled ideal flat cuts but
+              <strong>could not capture glue tab overlaps or construction sequencing problems</strong>.
+            </p>
+            <p class="lesson">Pair CAD prototyping with a small physical mock-up of the most complex joint to close the fidelity gap before full construction begins.</p>
+          </div>
+
+          <div class="ctmf-card converge">
+            <div class="ctmf-card-header">
+              <span class="badge badge-converge">Converge</span>
+              <span class="ctmf-name">Proxy Testing: Lesson Learned</span>
+            </div>
+            <p class="ctmf-row-label">Evidence</p>
+            <p>
+              No proxy testing was carried out before the final load test.
+              Every design existed only as calculation until the bridge was physically loaded.
+              The FOS model evaluated each cross-section in isolation and
+              <mark>never modelled inter-section connection behaviour</mark>.
+              This failure mode was invisible until construction.
+            </p>
+            <p class="ctmf-row-label">Assessment</p>
+            <p>
+              The gap between theoretical (1161N) and actual (400N) failure load was not a
+              modelling error within the FOS framework. It was a failure to identify connection
+              behaviour as a testable hypothesis at all.
+              Proxy testing forces a team to ask: what does this model not capture?
+            </p>
+            <p class="lesson">In any project where multiple components join, connection behaviour should be treated as a testable hypothesis rather than an assumed consequence of cross-section calculations.</p>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    ESC102 Student Engineer Design Portfolio · University of Toronto · 2026
+  </footer>
+
+  <script src="js/praxis.js"></script>
+</body>
+</html>
